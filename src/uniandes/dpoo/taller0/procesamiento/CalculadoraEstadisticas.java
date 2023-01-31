@@ -67,6 +67,21 @@ public class CalculadoraEstadisticas
 	// Métodos
 	// ************************************************************************
 
+	public String paisAtleta (String nombreAtleta)
+	{
+		Pais pais;
+		String resultado = null;
+		Atleta elAtleta = buscarAtleta(nombreAtleta);
+		
+		if (elAtleta != null)
+		{
+			pais = elAtleta.darPais();
+			resultado = pais.darNombre();
+		}
+		
+		return resultado;
+	}
+	
 	/**
 	 * Calcula cuáles fueron los atletas que participaron en cada evento para el año
 	 * indicado

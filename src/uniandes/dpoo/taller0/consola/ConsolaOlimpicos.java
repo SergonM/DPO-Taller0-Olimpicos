@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 import uniandes.dpoo.taller0.modelo.Atleta;
+import uniandes.dpoo.taller0.modelo.Pais;
 import uniandes.dpoo.taller0.modelo.Genero;
 import uniandes.dpoo.taller0.procesamiento.CalculadoraEstadisticas;
 import uniandes.dpoo.taller0.procesamiento.LoaderOlimpicos;
@@ -63,7 +64,7 @@ public class ConsolaOlimpicos
 				else if (opcion_seleccionada == 12 && calculadora != null)
 					ejecutarPorcentajeMedallistas();
 				else if (opcion_seleccionada == 13 && calculadora != null)
-					ejecutarPaisJugador();
+					ejecutarPaisAtleta();
 				else if (opcion_seleccionada == 14)
 				{
 					System.out.println("Saliendo de la aplicación ...");
@@ -104,13 +105,26 @@ public class ConsolaOlimpicos
 		System.out.println("10. Consultar el atleta todoterreno");
 		System.out.println("11. Consultar los medallistas por país y género");
 		System.out.println("12. Consultar el porcentaje de atletas que son medallistas");
-		System.out.println("13. Salir de la aplicación\n");
+		System.out.println("13. Consultar nacionalidad de atleta por nombre");
+		System.out.println("14. Salir de la aplicación\n");
 	}
 	
-	private void ejecutarPaisJugador()
+	private void ejecutarPaisAtleta()
 	{
 		System.out.println("\n" + "Porcentaje de atletas que son medallistas" + "\n");
 		String nombre = input("Por favor ingrese el nombre del deportista");
+		
+		String paisAtleta = calculadora.paisAtleta(nombre);
+		
+		if (paisAtleta != null)
+		{
+			System.out.println("El pais del atleta es: " + paisAtleta);
+		}
+		else
+		{
+			System.out.println("No se encontro el atleta.");
+		}
+		
 		
 	}
 
