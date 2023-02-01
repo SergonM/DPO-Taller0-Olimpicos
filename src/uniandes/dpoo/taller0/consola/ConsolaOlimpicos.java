@@ -9,7 +9,6 @@ import java.util.List;
 import java.util.Map;
 
 import uniandes.dpoo.taller0.modelo.Atleta;
-import uniandes.dpoo.taller0.modelo.Pais;
 import uniandes.dpoo.taller0.modelo.Genero;
 import uniandes.dpoo.taller0.procesamiento.CalculadoraEstadisticas;
 import uniandes.dpoo.taller0.procesamiento.LoaderOlimpicos;
@@ -109,6 +108,9 @@ public class ConsolaOlimpicos
 		System.out.println("14. Salir de la aplicación\n");
 	}
 	
+	/**
+	 * Pide al usuario el nombre de un atleta e imprime su nacionalidad
+	 */
 	private void ejecutarPaisAtleta()
 	{
 		System.out.println("\n" + "Porcentaje de atletas que son medallistas" + "\n");

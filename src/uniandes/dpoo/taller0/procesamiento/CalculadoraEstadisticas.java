@@ -67,6 +67,12 @@ public class CalculadoraEstadisticas
 	// Métodos
 	// ************************************************************************
 
+	/**
+	 * Encuentra la nacionalidad de un atleta dado
+	 * 
+	 * @param nombreAtleta: Nombre del atleta del cual se desea conocer su nacionalidad
+	 * @return El pais del atleta que se busco o null en caso de no encontrar el atleta
+	 */
 	public String paisAtleta (String nombreAtleta)
 	{
 		Pais pais;
